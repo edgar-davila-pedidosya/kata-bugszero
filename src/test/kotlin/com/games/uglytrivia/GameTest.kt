@@ -19,7 +19,7 @@ class GameTest {
         val resultStream = ByteArrayOutputStream()
         System.setOut(PrintStream(resultStream))
 
-        IntStream.range(1, 15).forEach { i -> GameRunner.playGame(randomizer) }
+        IntStream.range(1, 15).forEach { GameRunner.playGame(randomizer) }
 
         val verified = File(Paths.get("").toAbsolutePath().toString()
                 + "/GameTest.itsLockedDown.approved.txt").readText(Charsets.UTF_8)
