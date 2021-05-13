@@ -46,9 +46,7 @@ class Game {
         return true
     }
 
-    fun howManyPlayers(): Int {
-        return players.size
-    }
+    fun howManyPlayers() = players.size
 
     fun roll(roll: Int) {
         if (!isPlayable) throw  NotEnoughPlayersException()
